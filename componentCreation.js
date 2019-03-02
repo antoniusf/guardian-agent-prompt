@@ -18,7 +18,7 @@ function createOptionList(parent, component) {
     var argument = Qt.application.arguments[1]
 
     // slice of the "answer" instruction
-    var lines = argument.split("\\n").slice(0, -2)
+    var lines = argument.split("\n").slice(0, -2)
     var question = ""
     lines.forEach(function (line) {
         var match = line.match(/^    ([0-9]+)\) (.*)$/)
