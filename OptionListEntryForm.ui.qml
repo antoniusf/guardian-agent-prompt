@@ -5,6 +5,8 @@ Item {
 
     property alias number: optionNumber.text
     property alias text: optionText.text
+    property alias hoverCircle: hoverCircle
+    property alias backgroundRect: rectangle1
     width: 500
 
     Rectangle {
@@ -12,6 +14,19 @@ Item {
         color: colorScheme.listItemBackground
         clip: true
         anchors.fill: parent
+
+        Rectangle {
+            id: hoverCircle
+            property real centerx: 300
+            property real centery: 50
+            x: centerx - width/2
+            y: centery - width/2
+            width: 100
+            height: width
+            color: colorScheme.listItemHoverBackground
+            radius: width
+            opacity: 0.0
+        }
 
         Rectangle {
             id: rectangle2
