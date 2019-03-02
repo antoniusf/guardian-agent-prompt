@@ -13,6 +13,7 @@ Circle {
         onClicked: {
             counter++
             ComponentCreation.initiateCreateOptionList(optionList)
+            writer.test("hi")
         }
 
         onPressed: parent.buttonColor = "green"

@@ -2,6 +2,7 @@ import QtQuick 2.3
 import QtQuick.Window 2.2
 
 import "componentCreation.js" as ComponentCreation
+import stdoutwriter 1.0
 
 Window {
     visible: true
@@ -38,6 +39,10 @@ Window {
             anchors.top: parent.top
             anchors.topMargin: 20
         }
+    }
+
+    Writer {
+        id: writer
     }
 
     Component.onCompleted: ComponentCreation.initiateCreateOptionList(optionList)
