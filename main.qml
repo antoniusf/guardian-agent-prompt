@@ -24,7 +24,8 @@ Window {
             width: parent.width > (max_width + 2*margin) ? (max_width) : parent.width - 2*margin
             anchors.leftMargin: parent.width > max_width ? (parent.width - (max_width + 2*margin))/2 + margin : margin
 
-            height: parent.height
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 0
             anchors.left: parent.left
             anchors.rightMargin: 0
             anchors.top: questiontext.bottom
