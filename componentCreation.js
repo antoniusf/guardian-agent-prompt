@@ -22,11 +22,18 @@ function createOptionListEntry(parent, component, number, text) {
 
 function createOptionList(parent, component) {
     var argument = Qt.application.arguments[1]
-    var lines = argument.split("\\n")
+
+    // slice of the "answer" instruction
+    var lines = argument.split("\\n").slice(0, -2)
+    var question = ""
     lines.forEach(function (line) {
         var match = line.match(/^    ([0-9]+)\) (.*)$/)
         if (match) {
             createOptionListEntry(parent, component, match[1], match[2])
         }
+        else {
+            question = question + "\n" + line
+        }
     })
+    questiontext.text = question
 }

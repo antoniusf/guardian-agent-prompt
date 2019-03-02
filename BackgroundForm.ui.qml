@@ -6,17 +6,7 @@ Item {
 
     Rectangle {
         id: rectangle1
-        gradient: Gradient {
-            GradientStop {
-                position: 0
-                color: "#dde9f4"
-            }
-
-            GradientStop {
-                position: 1
-                color: "#8dbdee"
-            }
-        }
+        color: colorScheme.background
         anchors.fill: parent
     }
 }

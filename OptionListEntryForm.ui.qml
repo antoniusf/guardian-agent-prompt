@@ -9,13 +9,13 @@ Item {
 
     Rectangle {
         id: rectangle1
-        color: "#cfcfcf"
+        color: colorScheme.listItemBackground
         anchors.fill: parent
 
         Rectangle {
             id: rectangle2
             width: height
-            color: "#000000"
+            color: colorScheme.box
             anchors.top: parent.top
             anchors.topMargin: 0
             anchors.bottom: parent.bottom
@@ -25,7 +25,7 @@ Item {
 
             Text {
                 id: optionNumber
-                color: "#ffffff"
+                color: colorScheme.background
                 text: "1"
                 font.bold: true
                 font.pixelSize: width*0.6
@@ -38,10 +38,13 @@ Item {
         Text {
             id: optionText
             text: qsTr("Text")
+            textFormat: Text.PlainText
+            wrapMode: Text.WordWrap
             font.pixelSize: height*0.4
             verticalAlignment: Text.AlignVCenter
             anchors.leftMargin: height*1.3
             anchors.fill: parent
+            color: colorScheme.foreground
         }
     }
 }

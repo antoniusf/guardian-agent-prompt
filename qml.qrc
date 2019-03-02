@@ -12,5 +12,7 @@
         <file>componentCreation.js</file>
         <file>OptionList.qml</file>
         <file>OptionListForm.ui.qml</file>
+        <file>ColorScheme.qml</file>
+        <file>ColorSchemeForm.ui.qml</file>
     </qresource>
 </RCC>
