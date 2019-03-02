@@ -5,11 +5,12 @@ Item {
 
     property alias number: optionNumber.text
     property alias text: optionText.text
-    width: 400
+    width: 500
 
     Rectangle {
         id: rectangle1
         color: colorScheme.listItemBackground
+        clip: true
         anchors.fill: parent
 
         Rectangle {
@@ -46,6 +47,7 @@ Item {
             anchors.fill: parent
             color: colorScheme.foreground
         }
+
     }
 }
 

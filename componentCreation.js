@@ -11,13 +11,7 @@ function initiateCreateOptionList(parent) {
 function createOptionListEntry(parent, component, number, text) {
     var optionListEntry = component.createObject(parent, {"number": number, "text": text, "width": Qt.binding(function() {return parent.width}), "height": 40, "y": parent.y_cursor});
     parent.y_cursor += 50
-
-    if (optionListEntry == null) {
-        console.log("Couldn't create new option list entry")
-    }
-    else {
-        console.log("option list entry created!")
-    }
+    console.log("creating component")
 }
 
 function createOptionList(parent, component) {

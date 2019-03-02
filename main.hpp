@@ -11,7 +11,7 @@ class testClass : public QObject
     public:
     explicit testClass(QObject *parent = nullptr){}
 public slots:
-    void test(QString string) {
+    void write(QString string) {
         QTextStream out(stdout);
         out << string << endl;
     }

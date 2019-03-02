@@ -48,6 +48,23 @@ Window {
             anchors.topMargin: 20
             font.pixelSize: 20
         }
+
+        focus: true
+        Keys.onPressed: {
+
+            var isValid = false;
+            for (var i=0; i<optionList.children.length; i++) {
+                if (optionList.children[i].number === event.text) {
+                    isValid = true
+                    break
+                }
+            }
+
+            if (isValid) {
+                writer.write(event.text)
+                Qt.quit()
+            }
+        }
     }
 
     Writer {
