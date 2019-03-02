@@ -1,6 +1,22 @@
 import QtQuick 2.0
+import "componentCreation.js" as ComponentCreation
 
-Item {
+Circle {
+    id: sendButton
 
+    property int counter: 0
+    property Receiver target: null
+
+    MouseArea {
+        anchors.fill: parent
+
+        onClicked: {
+            counter++
+            ComponentCreation.initiateCreateOptionList(optionList)
+        }
+
+        onPressed: parent.buttonColor = "green"
+        onReleased: parent.buttonColor = "blue"
+    }
 }
 
